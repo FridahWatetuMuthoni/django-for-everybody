@@ -1,0 +1,17 @@
+.copy-button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#textToCopy {
+  width: 400px;
+  margin: 0 auto;
+  border: none;
+  box-shadow: 2px 2px 2px 2px gray;
+  padding: 20px;
+  border-radius: 5px;
+}

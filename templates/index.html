@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <main>
+      <textarea name="text" rows="4" cols="50" id="textToCopy">
+        This is some sample text or code that you can copy!
+    </textarea
+      >
+      <button class="copy-button" id="copyButton">Copy Text</button>
+    </main>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
