@@ -115,3 +115,83 @@ fhand = urllib.request.urlopen('http://127.0.0.1:9000/romeo.txt')
 for line in fhand:
     print(line.decode().strip())
 ```
+
+## SQL COMMANDS
+
+```sql
+
+INSERT INTO Users(name, email) VALUES ('kristen','kristen@gmail.com');
+
+DELETE FROM Users WHERE email='ted@unich.edu';
+
+UPDATE Users SET name="Charles" WHERE email='cvdev@gmailcom';
+
+SELECT * FROM Users;
+
+SELECT * FROM Users WHERE email="kristen@gmail.com";
+
+SELECT * FROM Users ORDER BY email;
+
+SELECT * FROM Users ORDER BY name DESC;
+
+DROP TABLE Users;
+
+```
+
+## DJANGO ORM COMMANDS
+
+```python
+from .models import User
+
+user = User(name="sally", email="sally@gmail.com")
+user.save()
+
+User.objects.values()
+User.objects.filter(email="sally@gmail.com").values()
+User.objects.filter(email="sally@gmail.com").delete()
+User.objects.values()
+User.objects.values().order_by('email')
+User.objects.values().order_by('-name')
+
+```
+
+## Django Model Fields Types
+
+1. AutoField
+2. BigAutoField
+3. BigIntegerField
+4. BinaryField
+5. BooleanField
+6. CharField
+7. DateField
+8. DateTimeField
+9. DecimalField
+10. EmailField
+11. FileField
+12. FilePathField
+13. FloatField
+14. ImageField
+15. IntergerField
+16. GenericIPAddressField
+17. NullBooleanField
+18. PositiveIntegerField
+19. PositiveSmallIntegerField
+20. SlugField
+21. SmallIntegerField
+22. TextField
+23. TimeField
+24. URLField
+25. ForeignKey
+26. ManyToManyField
+27. OneToOneField
+
+## Django Commands
+
+```sh
+pip install -r requirements.txt #to make sure that all the utilities are there
+python manage.py check #make sure that things are setup
+python manage.py makemigrations #creating the sql migration files
+rm db.sqlite3 #deleting the database
+python manage.py migrate #create the database and the tables
+python manage.py shell #interact with the database
+```
